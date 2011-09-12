@@ -29,6 +29,9 @@ set tabstop=4
 set shiftwidth=2
 set softtabstop=2
 
+set list listchars=tab:»\ ,trail:·
+highlight SpecialKey ctermfg=7
+
 let NERDSpaceDelims=1
 let NERDCompactSexyComs=1
 
@@ -41,6 +44,9 @@ map q; q:
 
 let mapleader = ","
 let g:mapleader = ","
+
+nnoremap s :exec "normal i".nr2char(getchar())."\e"<CR>
+nnoremap S :exec "normal a".nr2char(getchar())."\e"<CR>
 
 :nnoremap <silent> <C-l> :nohl<CR><C-l>
 
