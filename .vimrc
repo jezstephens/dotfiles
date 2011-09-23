@@ -51,3 +51,7 @@ nnoremap S :exec "normal a".nr2char(getchar())."\e"<CR>
 :nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 set history=200
+
+if filereadable($HOME . "/.vimrc.local")
+  source $HOME/.vimrc.local
+endif
