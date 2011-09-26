@@ -29,6 +29,9 @@ set tabstop=4
 set shiftwidth=2
 set softtabstop=2
 
+set laststatus=2
+set statusline=%F\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
+
 set list listchars=tab:»\ ,trail:·
 highlight SpecialKey ctermfg=7
 
