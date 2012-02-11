@@ -53,6 +53,9 @@ nnoremap S :exec "normal a".nr2char(getchar())."\e"<CR>
 
 :nnoremap <silent> <C-l> :nohl<CR><C-l>
 
+nnoremap <leader>t :LustyFilesystemExplorerFromHere<CR>
+nnoremap <leader>b :LustyBufferExplorer<CR>
+
 set history=200
 
 if filereadable($HOME . "/.vimrc.local")
