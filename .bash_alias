@@ -1,0 +1,6 @@
+alias rm='rm -i'
+
+alias ll='ls -la'
+alias psl='ps -ely'
+
+hash colordiff 2>&- && alias diff='colordiff -u3'
