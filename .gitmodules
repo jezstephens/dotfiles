@@ -7,3 +7,6 @@
 [submodule ".rbenv"]
 	path = .rbenv
 	url = git@github.com:sstephenson/rbenv.git
+[submodule ".dircolors-solarized"]
+	path = .dircolors-solarized
+	url = git@github.com:seebi/dircolors-solarized.git
