@@ -1,6 +1,6 @@
 [user]
-	name = Jez Stephens
-	email = jezstephens@gmail.com
+  name = Jez Stephens
+  email = jezstephens@gmail.com
 
 [alias]
   co = checkout
@@ -11,3 +11,9 @@
   type = cat-file -t
   dump = cat-file -p
 
+[core]
+  excludesfile = ~/.gitignore_global
+[color]
+  ui = true
+[push]
+  default = upstream
