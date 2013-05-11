@@ -16,7 +16,3 @@ set guioptions-=R
 set guioptions+=c
 
 set guifont=Inconsolata\ Medium\ 11
-
-set bg=dark
-
-highlight specialkey guifg=ivory4

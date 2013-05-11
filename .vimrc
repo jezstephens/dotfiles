@@ -1,42 +1,13 @@
-runtime bundle/pathogen/autoload/pathogen.vim
-call pathogen#infect()
+" === vundle ===
 
-set shortmess=atI
+source ~/.vim/vundles.vim
 
-colorscheme zenburn
-
-filetype plugin indent on
-syntax on
+" === syntax ===
 
 set foldmethod=syntax
 set nofoldenable
 
-set wildmenu
-set wildmode=longest:full,full
-
-set hlsearch incsearch
-
-set nojoinspaces
-
-set ignorecase smartcase
-
-set scrolloff=3
-
-set hidden
-
-set expandtab
-set tabstop=4
-set shiftwidth=2
-set softtabstop=2
-
-set laststatus=2
-set statusline=%F\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
-
-set list listchars=tab:»\ ,trail:·
-highlight SpecialKey ctermfg=7
-
-let NERDSpaceDelims=1
-let NERDCompactSexyComs=1
+" === bindings ===
 
 nnoremap ' `
 nnoremap ` '
@@ -53,11 +24,17 @@ nnoremap S :exec "normal a".nr2char(getchar())."\e"<CR>
 
 :nnoremap <silent> <C-l> :nohl<CR><C-l>
 
-nnoremap <leader>t :LustyFilesystemExplorerFromHere<CR>
-nnoremap <leader>b :LustyBufferExplorer<CR>
+" === editing ===
 
+set nojoinspaces
+
+" display unprintable characters
+set list listchars=tab:»\ ,trail:·
+highlight SpecialKey ctermfg=7
+
+" === misc ===
+
+set hidden
 set history=200
 
-if filereadable($HOME . "/.vimrc.local")
-  source $HOME/.vimrc.local
-endif
+cd ~/src/meet-and-jam/meet-and-jam
