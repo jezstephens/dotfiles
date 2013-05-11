@@ -1,0 +1,3 @@
+OPTIONS=race:dwarf,role:val
+OPTIONS=color,hilite_pet,lit_corridor,DECgraphics,msg_window:f
+OPTIONS=autodig,autopickup,pickup_types:$
