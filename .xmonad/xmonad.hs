@@ -2,7 +2,9 @@ import XMonad
 import XMonad.Actions.UpdatePointer
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.ManageHelpers
 import XMonad.Layout.NoBorders
+import XMonad.Layout.Tabbed
 import XMonad.Util.Run
 
 import qualified Data.Map as M
@@ -14,7 +16,7 @@ myWorkspaces = map show [1..8]
 
 myFocusedBorderColor = "#3399ff"
 
-myLayout = tiled ||| Mirror tiled ||| Full
+myLayout = Full ||| tiled ||| Mirror tiled ||| simpleTabbed
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled   = Tall nmaster delta ratio
@@ -27,14 +29,18 @@ myLayout = tiled ||| Mirror tiled ||| Full
 
 
 myKeys (XConfig {modMask = modm}) = M.fromList $
-       [ ((modm .|. shiftMask, xK_i), spawn "chromium")
-       , ((modm, xK_i), spawn "uzbl-tabbed about:blank")
+       [ ((modm, xK_i), spawn "chromium")
+       , ((modm .|. shiftMask, xK_i), spawn "chromium --incognito")
        , ((modm, xK_u), spawn "gvim")
-       , ((modm .|. shiftMask, xK_u), spawn "emacs")
        , ((modm .|. shiftMask, xK_z), spawn "slock") ]
 
 
-myPP bar = defaultPP 
+myManageHook = composeOne
+       [ transience
+       , isFullscreen -?> doFullFloat ]
+
+
+myPP bar = defaultPP
   { ppOutput = hPutStrLn bar
   , ppTitle = xmobarColor "white" "" . shorten 110
   , ppCurrent = xmobarColor "white" "black" . pad
@@ -54,10 +60,10 @@ main = do
   xmonad $ defaultConfig
     { modMask            = myModMask
     , keys               = \c -> myKeys c `M.union` keys defaultConfig c
-    -- , keys               = \c -> myKeys c `M.union` keys gnomeConfig c
     , workspaces         = myWorkspaces
     , layoutHook         = smartBorders (avoidStruts myLayout)
     , focusedBorderColor = myFocusedBorderColor
     , terminal           = "urxvtc"
     , logHook            = dynamicLogWithPP (myPP xmobar) >> updatePointer (Relative 0.5 0.5)
+    , manageHook         = myManageHook
     }
