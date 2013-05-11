@@ -1,0 +1,7 @@
+set MAIL=/home/jez/Maildir
+
+set PAGER=less
+set EDITOR=vim
+set VISUAL=vim
+
+retain bcc cc date from subject to
