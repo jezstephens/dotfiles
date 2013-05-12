@@ -15,5 +15,6 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/vimwiki'
 "Bundle 'tpope/vim-rails.git'
 Bundle 'skwp/vim-colors-solarized'
+Bundle 'mileszs/ack.vim'
 
 filetype plugin indent on
