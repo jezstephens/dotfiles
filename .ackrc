@@ -1,1 +1,2 @@
 --type-add=coffee:ext:coffee
+--type-add=css:ext:scss
