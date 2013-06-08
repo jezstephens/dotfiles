@@ -7,9 +7,12 @@
   ci = commit
   st = status
   br = branch
+  di = diff
+  ds = diff --staged
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
+  amend = ci --amend
 
 [core]
   excludesfile = ~/.gitignore_global
