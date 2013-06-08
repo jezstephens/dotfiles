@@ -37,4 +37,4 @@ highlight SpecialKey ctermfg=7
 set hidden
 set history=200
 
-cd ~/src/meet-and-jam/meet-and-jam
+cd ~/src/maj/meet-and-jam
