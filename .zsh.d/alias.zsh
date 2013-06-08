@@ -7,3 +7,5 @@ if [[ $TERM == rxvt* ]]; then
 fi
 
 alias gems='gem search --remote'
+
+alias base='cd ~/src/maj/meet-and-jam'
