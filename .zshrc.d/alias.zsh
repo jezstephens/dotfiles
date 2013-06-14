@@ -6,7 +6,7 @@ if [[ $TERM == rxvt* ]]; then
   alias ssh='TERM=xterm-256color ssh'
 fi
 
-alias gs='git status -s'
+alias gs='git status -sb'
 
 alias gems='gem search --remote'
 

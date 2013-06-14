@@ -6,7 +6,7 @@
   co = checkout
   ci = commit
   st = status
-  ss = status -s
+  ss = status -sb
   br = branch
   di = diff
   ds = diff --staged
