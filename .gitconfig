@@ -1,26 +1,24 @@
 [user]
-  name = Jez Stephens
-  email = jezstephens@gmail.com
-
+	name = Jez Stephens
+	email = jezstephens@gmail.com
 [alias]
-  co = checkout
-  ci = commit
-  st = status
-  ss = status -sb
-  br = branch
-  di = diff
-  ds = diff --staged
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  type = cat-file -t
-  dump = cat-file -p
-  amend = commit --amend
+	co = checkout
+	ci = commit
+	st = status
+	ss = status -sb
+	br = branch
+	di = diff
+	ds = diff --staged
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	amend = commit --amend
 	ctags = !.git/hooks/ctags
-
 [core]
-  excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [color]
-  ui = true
+	ui = true
 [push]
-  default = upstream
+	default = upstream
 [init]
 	templatedir = ~/.git_template
