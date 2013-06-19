@@ -5,3 +5,6 @@
 
 # ctags
 /tags
+
+# ack
+/.ackrc
