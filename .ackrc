@@ -1,2 +1,4 @@
 --type-add=coffee:ext:coffee
+--type-add=html:ext:mustache
+--type-add=mustache:ext:mustache
 --type-add=css:ext:scss
