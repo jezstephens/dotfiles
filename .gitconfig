@@ -22,3 +22,5 @@
 	default = upstream
 [init]
 	templatedir = ~/.git_template
+[gui]
+	warndetachedcommit = true
