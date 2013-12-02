@@ -1,5 +1,6 @@
 #!/bin/sh
-set -e
-trap "rm -f .git/tags.$$" EXIT
-nice ctags --tag-relative --exclude=.git -Rf .git/tags.$$
+mkdir .git/tags.lock 2>/dev/null || exit 0
+trap "rmdir .git/tags.lock; rm -f .git/tags.$$" EXIT
+
+nice git ls-files | ctags --tag-relative -f .git/tags.$$ -L -
 mv .git/tags.$$ .git/tags
