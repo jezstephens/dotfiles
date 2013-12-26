@@ -5,6 +5,7 @@ call vundle#rc()
 
 Bundle "gmarik/vundle"
 
+Bundle 'SirVer/ultisnips'
 Bundle 'godlygeek/tabular'
 Bundle 'jgdavey/tslime.vim'
 Bundle 'juvenn/mustache.vim'

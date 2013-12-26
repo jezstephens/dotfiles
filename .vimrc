@@ -1,3 +1,16 @@
+let g:vimwiki_list = [{
+\ 'path':   '~/wiki',
+\ 'syntax': 'markdown',
+\ 'ext':    '.markdown'
+\ }]
+let g:vimwiki_ext2syntax = {
+\ '.wiki': 'default',
+\ '.markdown': 'markdown',
+\ '.md': 'markdown',
+\ '.mdown': 'markdown'
+\ }
+let g:vimwiki_global_ext = 1
+
 " === vundle ===
 
 source ~/.vim/vundles.vim
@@ -31,6 +44,11 @@ set nojoinspaces
 " display unprintable characters
 set list listchars=tab:»\ ,trail:·
 highlight SpecialKey ctermfg=7
+
+" force copy (as opposed to rename) on backup to work around this issue:
+" https://github.com/karma-runner/karma/issues/199
+" https://github.com/paulmillr/chokidar/issues/35
+set backupcopy=yes
 
 " === misc ===
 
