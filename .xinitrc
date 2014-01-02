@@ -12,6 +12,9 @@ setxkbmap -option ctrl:nocaps
 # bell off
 xset b off
 
+# keyboard autorepeat
+xset r rate 200 20
+
 # urxvt daemon
 urxvtd -q -f -o
 
