@@ -1,1 +1,1 @@
-eval "$(dircolors ~/.dircolors-solarized/dircolors.ansi-dark)"
+eval "$(dircolors ~/.dircolors-solarized/dircolors.ansi-light)"
