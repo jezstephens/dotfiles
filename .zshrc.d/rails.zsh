@@ -1,1 +1,0 @@
-alias rails='script/rails'
