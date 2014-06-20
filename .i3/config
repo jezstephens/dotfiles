@@ -10,13 +10,24 @@ set $mod Mod4
 font pango:Inconsolata bold 11
 
 # Colours
-client.focused          #000000 #444444 #ffffff #2e9ef4
-client.focused_inactive #000000 #333333 #ffffff #484e50
-client.unfocused        #000000 #222222 #888888 #292d2e
-client.urgent           #000000 #222222 #ffffff #900000
+# client.focused          #000000 #444444 #ffffff #2e9ef4
+# client.focused_inactive #000000 #333333 #ffffff #484e50
+# client.unfocused        #000000 #222222 #888888 #292d2e
+# client.urgent           #000000 #222222 #ffffff #900000
+
+client.focused          #252525 #f7f7f7 #252525 #2e9ef4
+client.focused_inactive #252525 #333333 #f7f7f7 #484e50
+client.unfocused        #252525 #222222 #888888 #292d2e
+client.urgent           #252525 #222222 #f7f7f7 #900000
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+# Use tabbed layout by default
+workspace_layout tabbed
+
+# 1 pixel window border
+new_window pixel 1
 
 # kill focused window
 bindsym $mod+q kill
@@ -27,7 +38,7 @@ bindsym $mod+p exec dmenu_run
 bindsym $mod+u exec gvim
 bindsym $mod+i exec chromium
 bindsym $mod+shift+i exec chromium --incognito
-bindsym $mod+z exec i3lock -c 000000
+bindsym $mod+z exec i3lock -u -d -c 000000
 
 # change focus
 bindsym $mod+h focus left
@@ -90,6 +101,7 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
+bindsym $mod+dead_grave workspace back_and_forth
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -104,7 +116,7 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # move workspace to next monitor
-bindsym $mod+dead_grave move workspace to output up
+bindsym $mod+Shift+dead_grave move workspace to output up
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -144,3 +156,5 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+bindsym $mod+b bar mode toggle
