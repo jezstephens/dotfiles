@@ -19,7 +19,7 @@ xset r rate 200 20
 urxvtd -q -f -o
 
 # dynamic monitor temperature
-redshift -l 51.78:0.31 -t 5700:3600 -g 0.8 -m vidmode -v &
+redshift -l 51.78:0.31 -t 5700:3600 -g 0.8 -b 1.0:0.4 -m randr &
 
 # hide pointer
 unclutter -idle 1 -jitter 3 -root &
