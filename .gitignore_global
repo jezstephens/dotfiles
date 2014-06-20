@@ -8,3 +8,6 @@
 
 # ack
 /.ackrc
+
+# sass
+/.sass-cache
