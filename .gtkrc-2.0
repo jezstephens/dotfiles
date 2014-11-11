@@ -1,3 +1,7 @@
+gtk-theme-name = "Adwaita"
+gtk-icon-theme-name = "Adwaita"
+gtk-font-name = "DejaVu Sans 10"
+
 style "vimfix" {
   bg[NORMAL] = "#242424" # this matches my gvim theme 'Normal' bg color.
 }
