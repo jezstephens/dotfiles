@@ -1,0 +1,33 @@
+# vim: ft=sh
+
+"amixer set Master 5%+ -q"
+  XF86AudioRaiseVolume
+
+"amixer set Master 5%- -q"
+  XF86AudioLowerVolume
+
+"st -e tmux"
+  mod4 + Return
+
+"st -e vim"
+  mod4 + u
+
+"st -e ranger"
+  mod4 + o
+
+#"chromium"
+"firefox-developer"
+  mod4 + i
+
+#"chromium --incognito"
+"firefox-developer --private-window"
+  mod4 + shift + i
+
+"dmenu_run"
+  mod4 + p
+
+"i3lock -u -d -c 000000"
+  mod4 + z
+
+"pkill -USR1 redshift"
+  mod4 + d
