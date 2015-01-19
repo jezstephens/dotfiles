@@ -40,15 +40,11 @@ nnoremap S :exec "normal a".nr2char(getchar())."\e"<CR>
 " === editing ===
 
 set nojoinspaces
+set updatetime=1000
 
 " display unprintable characters
 set list listchars=tab:»\ ,trail:·
 highlight SpecialKey ctermfg=7
-
-" force copy (as opposed to rename) on backup to work around this issue:
-" https://github.com/karma-runner/karma/issues/199
-" https://github.com/paulmillr/chokidar/issues/35
-set backupcopy=yes
 
 " === misc ===
 
