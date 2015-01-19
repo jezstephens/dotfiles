@@ -24,7 +24,7 @@ xset b off
 xset r rate 200 20
 
 # dynamic monitor temperature
-redshift -l 51.78:0.31 -t 5700:3600 -g 0.8 -b 1.0:0.4 -m randr &
+redshift-gtk -l 51.78:0.31 -t 5700:3600 -g 0.8 -b 1.0:0.4 -m randr &
 
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
