@@ -9,16 +9,11 @@ set $mod Mod4
 # chose a FreeType font, such as:
 font pango:Inconsolata bold 11
 
-# Colours
-# client.focused          #000000 #444444 #ffffff #2e9ef4
-# client.focused_inactive #000000 #333333 #ffffff #484e50
-# client.unfocused        #000000 #222222 #888888 #292d2e
-# client.urgent           #000000 #222222 #ffffff #900000
-
-client.focused          #252525 #f7f7f7 #252525 #2e9ef4
-client.focused_inactive #252525 #333333 #f7f7f7 #484e50
-client.unfocused        #252525 #222222 #888888 #292d2e
-client.urgent           #252525 #222222 #f7f7f7 #900000
+# Colours               border  bg      text    indicator
+client.focused          #f7f7f7 #f7f7f7 #252525 #2e9ef4
+client.focused_inactive #252525 #252525 #f7f7f7 #484e50
+client.unfocused        #252525 #252525 #888888 #292d2e
+client.urgent           #252525 #252525 #f7f7f7 #900000
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -26,19 +21,12 @@ floating_modifier $mod
 # Use tabbed layout by default
 workspace_layout tabbed
 
-# 1 pixel window border
-new_window pixel 1
+# no window borders
+new_window none
+new_float  none
 
 # kill focused window
 bindsym $mod+q kill
-
-# start applications
-bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+p exec dmenu_run
-bindsym $mod+u exec gvim
-bindsym $mod+i exec chromium
-bindsym $mod+shift+i exec chromium --incognito
-bindsym $mod+z exec i3lock -u -d -c 000000
 
 # change focus
 bindsym $mod+h focus left
