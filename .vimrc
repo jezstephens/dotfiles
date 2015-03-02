@@ -11,9 +11,9 @@ let g:vimwiki_ext2syntax = {
 \ }
 let g:vimwiki_global_ext = 1
 
-" === vundle ===
+" === plug ===
 
-source ~/.vim/vundles.vim
+source ~/.vim/plug.vim
 
 " === syntax ===
 
@@ -36,6 +36,8 @@ nnoremap s :exec "normal i".nr2char(getchar())."\e"<CR>
 nnoremap S :exec "normal a".nr2char(getchar())."\e"<CR>
 
 :nnoremap <silent> <C-l> :nohl<CR><C-l>
+
+nnoremap <leader>o :call RangerChooser()<CR>
 
 " === editing ===
 
