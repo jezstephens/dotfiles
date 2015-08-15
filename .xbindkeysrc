@@ -23,8 +23,14 @@
 "firefox-developer --private-window"
   mod4 + shift + i
 
-"dmenu_run"
+"rofi -show run -lines 5 -columns 3"
   mod4 + p
+
+"rofi -show ssh"
+  mod4 + comma
+
+"i3-dmenu-desktop --dmenu='rofi -dmenu -p run: -lines 5 -columns 3'"
+  mod4 + shift + P
 
 "i3lock -u -d -c 000000"
   mod4 + z

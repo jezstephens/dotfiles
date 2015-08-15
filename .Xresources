@@ -9,6 +9,27 @@ urxvt.font:         xft:Inconsolata-11
 urxvt.letterSpace:  -2
 urxvt.scrollBar:    off
 
+rofi.opacity: 90
+rofi.width: 100
+rofi.lines: 10
+rofi.columns: 1
+rofi.font: Inconsolata 11
+rofi.fg: #ffffff
+rofi.bg: #252525
+rofi.hlfg: #252525
+rofi.hlbg: #a7a7a7
+rofi.bc: #ffffff
+rofi.bw: 0
+rofi.loc: 0
+rofi.padding: 2
+rofi.location: 2
+rofi.yoffset: 0
+rofi.xoffset: 0
+rofi.fixed-num-lines: false
+rofi.hmode: false
+rofi.terminal: st
+rofi.ssh-set-title: true
+
 ! Solarized color scheme for the X Window System
 !
 ! http://ethanschoonover.com/solarized
