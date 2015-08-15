@@ -40,6 +40,9 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
+# focus urgent window
+bindsym $mod+n [urgent=latest] focus
+
 # move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
