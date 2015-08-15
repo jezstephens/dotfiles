@@ -10,6 +10,7 @@ if [[ $TERM == rxvt* ]]; then
 fi
 
 alias gs='git status -sb'
+alias gsh='git show'
 alias grb='git rebase'
 
 if (( $+commands[hub] )); then

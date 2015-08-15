@@ -14,6 +14,7 @@
 	dump = cat-file -p
 	amend = commit --amend
 	ctags = !.git/hooks/ctags
+	edit = !vim `git ls-files -m`
 [core]
 	excludesfile = ~/.gitignore_global
 [color]
