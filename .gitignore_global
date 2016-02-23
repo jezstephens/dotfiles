@@ -7,7 +7,7 @@
 /tags
 
 # ack
-/.ackrc
+.ackrc
 
 # sass
 /.sass-cache
