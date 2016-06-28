@@ -1,3 +1,4 @@
+--type-add=jsx:ext:jsx
 --type-add=coffee:ext:coffee
 --type-add=html:ext:mustache
 --type-add=mustache:ext:mustache
