@@ -9,10 +9,12 @@
 	br = branch
 	di = diff
 	ds = diff --staged
+	pr = pull-request
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	type = cat-file -t
 	dump = cat-file -p
 	amend = commit --amend
+	uncommit = reset --soft HEAD^
 	ctags = !.git/hooks/ctags
 	edit = !vim `git ls-files -m`
 [core]
@@ -25,3 +27,5 @@
 	templatedir = ~/.git_template
 [gui]
 	warndetachedcommit = true
+[diff]
+	compactionHeuristic = true
